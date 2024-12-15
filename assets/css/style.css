@@ -1,0 +1,125 @@
+    :root {
+        --bgFirst: hsl(0deg 0% 96.08%);
+        --bgSecend: hsl(139.76deg 84.54% 38.04%);
+        --bgBlack: #0d0909;
+        --color: #F5F7F8;
+        --color-Secend: hsl(139.76deg 84.54% 38.04%);
+
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .wrapper {
+        color: var(--color);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: hsl(0deg 0% 96.08%);
+    }
+
+    .wrapper .bg {
+        min-width: 70%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        -webkit-box-shadow: 9px 8px 46px 0px rgba(54, 28, 54, 1);
+        -moz-box-shadow: 9px 8px 46px 0px rgba(54, 28, 54, 1);
+        box-shadow: 9px 8px 46px 0px rgba(54, 28, 54, 1);
+        border-radius: 15px;
+
+    }
+
+    .wrapper .bg-top {
+        background-color: hsl(206.41deg 95.12% 48.24%);
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    .wrapper button {
+        outline: unset;
+        padding: 10px 30px;
+        border: unset;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: var(--bgFirst);
+        margin: 5px;
+        transition: .5s;
+    }
+
+    .wrapper button:hover {
+        background-color: var(--bgBlack);
+        color: var(--color-Secend);
+    }
+
+    .wrapper h1 {
+        margin-bottom: 10px;
+    }
+
+    .wrapper #input-task {
+        outline: unset;
+        padding: 10px 30px;
+        border: unset;
+        border-radius: 5px;
+        margin: 5px;
+        transition: .5s;
+        width: 50%;
+    }
+
+    .wrapper #input-task:focus {
+        border: 1px solid var(--bgSecend);
+    }
+
+     .list {
+        margin: 10px;
+        list-style: none;
+        background-color: hsl(0deg 0% 100%);
+        color: hsl(33.85deg 22.23% 21.39%);
+    }
+
+    .wrapper .list li {
+        display: flex;
+        justify-content: center;
+        background-color:hsl(0deg 0% 89.44%);
+        margin: 10px;
+        padding: 2px;
+        color: hsl(33.85deg 22.23% 21.39%);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .list li input[type='checkbox']{
+        display: none;
+    }
+    .list li input[type='checkbox']:checked~.task-text {
+        font-style: italic;
+        text-decoration: line-through;
+        color: darkslategrey;
+    }
+
+    .list li .task-text {
+        margin: 15px 10px 10px;
+    }
+
+    @media only screen and (max-width:500px) {
+        .wrapper .bg {
+            max-width: unset;
+            min-width: 100%;
+            margin-top: 5px;
+        }
+
+        .wrapper button, .wrapper #input-task {
+            padding: 10px;
+            margin: 2PX;
+        }
+
+        .wrapper h1 {
+            margin: 5px auto;
+        }
+
+    }
