@@ -106,7 +106,7 @@
         margin: 15px 10px 10px;
     }
 
-    @media only screen and (max-width:500px) {
+    @media only screen and (max-width: 768px) {
         .wrapper .bg {
             max-width: unset;
             min-width: 100%;
@@ -121,5 +121,8 @@
         .wrapper h1 {
             margin: 5px auto;
         }
+            .wrapper{
+                display:block
+            }
 
     }
